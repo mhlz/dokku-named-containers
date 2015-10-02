@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 set -eo pipefail; [[ $DOKKU_TRACE ]] && set -x
 
+date +"%T" > /home/dokku/testfile
+
 STDIN=$(cat)
 HOSTNAME=$1
 echo "$STDIN -h ${HOSTNAME}"
